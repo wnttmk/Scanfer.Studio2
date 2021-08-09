@@ -4,7 +4,7 @@ option csharp_namespace = "Scanfer.Studio.GrpcSer";
 
 package GrpcSer;
 
-service GrpcService{
+service GrpcNService{
 	rpc GetServiceTime(GetServiceTimeRequest) returns (GetServiceTimeResponse);
 }
 

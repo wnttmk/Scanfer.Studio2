@@ -1,0 +1,20 @@
+syntax = "proto3";
+
+option csharp_namespace = "Scanfer.Studio.GrpcSer";
+import "google/protobuf/empty.proto";
+
+package strbuf;
+
+service strbufer {
+	rpc AtoN (stream ContentRequest) returns (stream ContentResponse);
+}
+
+message ContentRequest{
+	string id = 1;
+}
+
+message ContentResponse{
+	int32 code = 1;
+	string time = 2;
+	string id = 3;
+}

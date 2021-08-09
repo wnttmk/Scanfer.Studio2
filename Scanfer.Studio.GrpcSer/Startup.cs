@@ -32,7 +32,8 @@ namespace Scanfer.Studio.GrpcSer
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapGrpcService<GreeterService>();
-                endpoints.MapGrpcService<Scanfer.Studio.GrpcSer.Services.GrpcService>();
+                endpoints.MapGrpcService<Services.GrpcService>();
+                endpoints.MapGrpcService<StreamBuferService>();
 
                 endpoints.MapGet("/", async context =>
                 {

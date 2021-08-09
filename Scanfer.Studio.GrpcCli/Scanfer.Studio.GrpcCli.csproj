@@ -7,20 +7,20 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="Protos\GrpcSer.proto" />
+    <None Remove="Protos\strbuf.proto" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="Grpc.Net.Client" Version="2.27.0" />
     <PackageReference Include="Grpc.AspNetCore" Version="2.27.0" />
     <PackageReference Include="Microsoft.VisualStudio.Azure.Containers.Tools.Targets" Version="1.10.9" />
   </ItemGroup>
 
 	<ItemGroup>
-		<Protobuf Include="Protos\TestPFile.proto" GrpcServices="Client" />
+		<Protobuf Include="Protos\*.proto" GrpcServices="Client" />
+		 
 	</ItemGroup>
-
-  <ItemGroup>
-    <None Update="Protos\TestPFile.proto">
-      <GrpcServices>Server</GrpcServices>
-    </None>
-  </ItemGroup>
 
 
 </Project>

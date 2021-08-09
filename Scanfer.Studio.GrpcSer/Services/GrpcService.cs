@@ -6,7 +6,7 @@ using Grpc.Core;
 
 namespace Scanfer.Studio.GrpcSer.Services
 {
-    public class GrpcService : GrpcSer.GrpcService.GrpcServiceBase
+    public class GrpcService : GrpcSer.GrpcNService.GrpcNServiceBase
     {
         public override Task<GetServiceTimeResponse> GetServiceTime(GetServiceTimeRequest request, ServerCallContext context) =>
             Task.FromResult(new GetServiceTimeResponse()

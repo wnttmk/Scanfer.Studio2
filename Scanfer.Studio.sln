@@ -9,9 +9,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Scanfer.Studio.DockerTest",
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "GrpcTest", "GrpcTest", "{F624FA2E-9332-4904-9021-C665722686CF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Scanfer.Studio.GrpcSer", "Scanfer.Studio.GrpcSer\Scanfer.Studio.GrpcSer.csproj", "{C27F8847-28A5-470C-9203-ACF42BF91D0D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Scanfer.Studio.GrpcSer", "Scanfer.Studio.GrpcSer\Scanfer.Studio.GrpcSer.csproj", "{C27F8847-28A5-470C-9203-ACF42BF91D0D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Scanfer.Studio.GrpcCli", "Scanfer.Studio.GrpcCli\Scanfer.Studio.GrpcCli.csproj", "{F3BB0818-11D8-4EE0-974E-61E0D8D74716}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Scanfer.Studio.GrpcCli", "Scanfer.Studio.GrpcCli\Scanfer.Studio.GrpcCli.csproj", "{F3BB0818-11D8-4EE0-974E-61E0D8D74716}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
