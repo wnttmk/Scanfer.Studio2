@@ -5,7 +5,13 @@ VisualStudioVersion = 16.0.30114.105
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Scanfer.Studio.Concurrency", "Scanfer.Studio.Concurrency\Scanfer.Studio.Concurrency.csproj", "{6EEC8698-6AB0-4691-9D65-3A70C13D6DFC}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Scanfer.Studio.DockerTest", "Scanfer.Studio.DockerTest\Scanfer.Studio.DockerTest.csproj", "{5B5458D0-184B-4F3D-AA64-7F5D6ED2135B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Scanfer.Studio.DockerTest", "Scanfer.Studio.DockerTest\Scanfer.Studio.DockerTest.csproj", "{5B5458D0-184B-4F3D-AA64-7F5D6ED2135B}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "GrpcTest", "GrpcTest", "{F624FA2E-9332-4904-9021-C665722686CF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Scanfer.Studio.GrpcSer", "Scanfer.Studio.GrpcSer\Scanfer.Studio.GrpcSer.csproj", "{C27F8847-28A5-470C-9203-ACF42BF91D0D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Scanfer.Studio.GrpcCli", "Scanfer.Studio.GrpcCli\Scanfer.Studio.GrpcCli.csproj", "{F3BB0818-11D8-4EE0-974E-61E0D8D74716}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,9 +27,21 @@ Global
 		{5B5458D0-184B-4F3D-AA64-7F5D6ED2135B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5B5458D0-184B-4F3D-AA64-7F5D6ED2135B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5B5458D0-184B-4F3D-AA64-7F5D6ED2135B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C27F8847-28A5-470C-9203-ACF42BF91D0D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C27F8847-28A5-470C-9203-ACF42BF91D0D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C27F8847-28A5-470C-9203-ACF42BF91D0D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C27F8847-28A5-470C-9203-ACF42BF91D0D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F3BB0818-11D8-4EE0-974E-61E0D8D74716}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F3BB0818-11D8-4EE0-974E-61E0D8D74716}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F3BB0818-11D8-4EE0-974E-61E0D8D74716}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F3BB0818-11D8-4EE0-974E-61E0D8D74716}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{C27F8847-28A5-470C-9203-ACF42BF91D0D} = {F624FA2E-9332-4904-9021-C665722686CF}
+		{F3BB0818-11D8-4EE0-974E-61E0D8D74716} = {F624FA2E-9332-4904-9021-C665722686CF}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {759C3A20-FAC0-43C7-AEF2-81FE5F9993D0}

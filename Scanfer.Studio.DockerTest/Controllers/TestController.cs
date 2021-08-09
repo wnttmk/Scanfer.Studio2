@@ -14,7 +14,7 @@ namespace Scanfer.Studio.DockerTest.Controllers
         [HttpGet("Index")]
         public string Index()
         {
-            return $"这是一个久违的接口.{DateTime.Now.ToString("yyyyMMddHHmmssfff")}";
+            return $"这是一个11久违的接1212口.{DateTime.Now.ToString("yyyyMMddHHmmssfff")}";
         }
     }
 }

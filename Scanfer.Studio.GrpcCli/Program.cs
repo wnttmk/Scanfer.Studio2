@@ -1,20 +1,18 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Runtime.CompilerServices;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 
-namespace Scanfer.Studio.DockerTest
+namespace Scanfer.Studio.GrpcCli
 {
     public class Program
     {
         public static void Main(string[] args)
         {
-            Ak();
             CreateHostBuilder(args).Build().Run();
         }
 
@@ -24,18 +22,5 @@ namespace Scanfer.Studio.DockerTest
                 {
                     webBuilder.UseStartup<Startup>();
                 });
-
-        #region MyRegion
-
-        private static void Ak()
-        {
-        }
-
-        #endregion
-
-
-        public static void Bk()
-        {
-        }
     }
 }
