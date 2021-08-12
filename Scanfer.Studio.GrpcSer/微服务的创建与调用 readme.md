@@ -13,6 +13,16 @@
   public class GrpcService : GrpcSer.GrpcNService.GrpcNServiceBase
   #
 
+  最后，我们还要在startup中注册一下这个微服务
+  #
+              app.UseEndpoints(endpoints =>
+            {
+                endpoints.MapGrpcService<GreeterService>();
+                endpoints.MapGrpcService<Services.GrpcService>();
+                endpoints.MapGrpcService<StreamBuferService>();
+
+  #
+
   然后，我们在客户端Scanfer.Studio.GrpcCli,将protos中的文件复制进去。
   并在csproj文件中包含进去，将他的GrpcServices设置为Client，这样就创建了一个客户端的基本类了
   #

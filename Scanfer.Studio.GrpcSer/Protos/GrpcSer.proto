@@ -5,7 +5,11 @@ option csharp_namespace = "Scanfer.Studio.GrpcSer";
 package GrpcSer;
 
 service GrpcNService{
+	// 服务器时间
 	rpc GetServiceTime(GetServiceTimeRequest) returns (GetServiceTimeResponse);
+
+	// 读取名字
+	rpc ReadAppName(ReadAppNameRequest) returns (ReadAppNameResponse);
 }
 
 message GetServiceTimeRequest{
@@ -17,4 +21,14 @@ message GetServiceTimeResponse{
 	int32 code = 1;
 }
 
+
+message ReadAppNameRequest{
+
+}
+
+message ReadAppNameResponse{
+	string appName=1;
+	string monitorName=2;
+	string snapshotName=3;
+}
  

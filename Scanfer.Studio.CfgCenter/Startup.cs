@@ -8,9 +8,8 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using Scanfer.Studio.GrpcSer.Middlerware;
 
-namespace Scanfer.Studio.GrpcSer
+namespace Scanfer.Studio.CfgCenter
 {
     public class Startup
     {
@@ -27,11 +26,8 @@ namespace Scanfer.Studio.GrpcSer
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddGrpc();
-
             services.AddMscfg(Configuration);
         }
-
-
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
@@ -46,8 +42,6 @@ namespace Scanfer.Studio.GrpcSer
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapGrpcService<GreeterService>();
-                endpoints.MapGrpcService<Services.GrpcService>();
-                endpoints.MapGrpcService<StreamBuferService>();
 
                 endpoints.MapGet("/", async context =>
                 {

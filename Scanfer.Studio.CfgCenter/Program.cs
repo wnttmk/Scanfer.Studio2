@@ -4,10 +4,9 @@ using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Hosting;
 
-namespace Scanfer.Studio.GrpcSer
+namespace Scanfer.Studio.CfgCenter
 {
     public class Program
     {
@@ -20,13 +19,6 @@ namespace Scanfer.Studio.GrpcSer
         // For instructions on how to configure Kestrel and gRPC clients on macOS, visit https://go.microsoft.com/fwlink/?linkid=2099682
         public static IHostBuilder CreateHostBuilder(string[] args) =>
             Host.CreateDefaultBuilder(args)
-                .ConfigureAppConfiguration((context, config) =>
-                {
-                    config.SetBasePath(Environment.CurrentDirectory);
-                    var path = Environment.CurrentDirectory;
-                    config
-                    .AddJsonFile(path + "/Config/Config.json", true, true);
-                })
                 .ConfigureWebHostDefaults(webBuilder =>
                 {
                     webBuilder.UseStartup<Startup>();

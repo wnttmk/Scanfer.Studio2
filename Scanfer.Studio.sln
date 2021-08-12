@@ -13,8 +13,6 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Scanfer.Studio.GrpcSer", "S
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Scanfer.Studio.GrpcCli", "Scanfer.Studio.GrpcCli\Scanfer.Studio.GrpcCli.csproj", "{F3BB0818-11D8-4EE0-974E-61E0D8D74716}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Consul", "Consul", "{6B5487CD-9D37-4485-994D-93AAC6EC2357}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
