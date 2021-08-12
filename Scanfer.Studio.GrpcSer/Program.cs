@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Hosting;
+using Winton.Extensions.Configuration.Consul;
 
 namespace Scanfer.Studio.GrpcSer
 {
@@ -24,8 +25,22 @@ namespace Scanfer.Studio.GrpcSer
                 {
                     config.SetBasePath(Environment.CurrentDirectory);
                     var path = Environment.CurrentDirectory;
+
                     config
                     .AddJsonFile(path + "/Config/Config.json", true, true);
+
+
+                    #region Ìí¼Óconsul Ö§³Ö
+                    config.AddConsul("MscfgOptions", options =>
+                    {
+                        options.ConsulConfigurationOptions = opts =>
+                        {
+                            opts.Address = new Uri("http://192.168.200.112:8500/");
+                        };
+                        options.ReloadOnChange = true;
+                        
+                    });
+                    #endregion
                 })
                 .ConfigureWebHostDefaults(webBuilder =>
                 {
