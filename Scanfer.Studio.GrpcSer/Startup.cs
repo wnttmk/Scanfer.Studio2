@@ -9,6 +9,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Scanfer.Studio.GrpcSer.Middlerware;
+using IApplicationLifetime = Microsoft.Extensions.Hosting.IApplicationLifetime;
 
 namespace Scanfer.Studio.GrpcSer
 {
@@ -26,15 +27,22 @@ namespace Scanfer.Studio.GrpcSer
         // For more information on how to configure your application, visit https://go.microsoft.com/fwlink/?LinkID=398940
         public void ConfigureServices(IServiceCollection services)
         {
+
+            services.AddControllers();
+
             services.AddGrpc();
 
             services.AddMscfg(Configuration);
+
+            services.AddHealthChecks();
+
+             
         }
 
 
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
-        public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
+        public void Configure(IApplicationBuilder app, IWebHostEnvironment env, IHostApplicationLifetime lifetime)
         {
             if (env.IsDevelopment())
             {
@@ -43,11 +51,18 @@ namespace Scanfer.Studio.GrpcSer
 
             app.UseRouting();
 
+
+            app.UseHealthChecks("/Health");
+
+            app.RegisterConsul(lifetime);
+
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapGrpcService<GreeterService>();
                 endpoints.MapGrpcService<Services.GrpcService>();
                 endpoints.MapGrpcService<StreamBuferService>();
+
+                endpoints.MapControllers();
 
                 endpoints.MapGet("/", async context =>
                 {

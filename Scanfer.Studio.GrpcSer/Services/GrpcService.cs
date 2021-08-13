@@ -46,5 +46,7 @@ namespace Scanfer.Studio.GrpcSer.Services
                 SnapshotName = this.mscfgSnapshotOptions.AppName
             });
         }
+
+ 
     }
 }
