@@ -15,6 +15,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Scanfer.Studio.GrpcCli", "S
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Consul", "Consul", "{E21F6ABD-DBA5-4871-A582-D7BEBCF833BA}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Scanfer.Studio.S1", "Scanfer.Studio.S1\Scanfer.Studio.S1.csproj", "{746B4723-E92A-41D5-91B4-1B760C002B6A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -37,6 +39,10 @@ Global
 		{F3BB0818-11D8-4EE0-974E-61E0D8D74716}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F3BB0818-11D8-4EE0-974E-61E0D8D74716}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F3BB0818-11D8-4EE0-974E-61E0D8D74716}.Release|Any CPU.Build.0 = Release|Any CPU
+		{746B4723-E92A-41D5-91B4-1B760C002B6A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{746B4723-E92A-41D5-91B4-1B760C002B6A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{746B4723-E92A-41D5-91B4-1B760C002B6A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{746B4723-E92A-41D5-91B4-1B760C002B6A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -44,6 +50,7 @@ Global
 	GlobalSection(NestedProjects) = preSolution
 		{C27F8847-28A5-470C-9203-ACF42BF91D0D} = {F624FA2E-9332-4904-9021-C665722686CF}
 		{F3BB0818-11D8-4EE0-974E-61E0D8D74716} = {F624FA2E-9332-4904-9021-C665722686CF}
+		{746B4723-E92A-41D5-91B4-1B760C002B6A} = {E21F6ABD-DBA5-4871-A582-D7BEBCF833BA}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {759C3A20-FAC0-43C7-AEF2-81FE5F9993D0}
